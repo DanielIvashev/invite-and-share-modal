@@ -1,0 +1,64 @@
+{
+    "defaultSeverity": "warning",
+    "extends": ["stylelint-config-standard-scss", "stylelint-config-recommended-vue/scss"],
+    "ignoreFiles": [
+        "**/node_modules/**",
+        "**/dist/**",
+        "**/public/**",
+        "**/*.{js, vue, md, json, woff, png}"
+    ],
+    "plugins": ["stylelint-scss"],
+    "rules": {
+        "indentation": 4,
+        "declaration-block-no-duplicate-properties": [
+            true,
+            {
+                "ignore": ["consecutive-duplicates"]
+            }
+        ],
+        "block-no-empty": null,
+        "max-empty-lines": 2,
+        "max-nesting-depth": [
+            5,
+            {
+                "ignoreAtRules": ["each", "media", "supports", "include"],
+                "severity": "warning"
+            }
+        ],
+        "no-descending-specificity": null,
+        "string-no-newline": null,
+        "selector-max-universal": 1,
+        "at-rule-empty-line-before": [
+            "always",
+            {
+                "except": ["blockless-after-same-name-blockless", "first-nested"],
+                "ignore": ["after-comment"],
+                "ignoreAtRules": ["else"]
+            }
+        ],
+        "scss/dollar-variable-colon-space-after": "always",
+        "scss/dollar-variable-colon-space-before": "never",
+        "scss/dollar-variable-no-missing-interpolation": true,
+        "at-rule-no-unknown": null,
+        "scss/at-rule-no-unknown": true,
+        "selector-pseudo-class-no-unknown": [
+            true,
+            {
+                "ignorePseudoClasses": ["deep", "global"]
+            }
+        ],
+        "selector-type-no-unknown": [
+            true,
+            {
+                "ignore": ["custom-elements", "default-namespace"],
+                "ignoreTypes": ["from"]
+            }
+        ],
+        "selector-class-pattern": null,
+        "no-empty-source": null,
+        "scss/at-extend-no-missing-placeholder": null,
+        "scss/at-import-partial-extension": "never",
+        "no-duplicate-selectors": null,
+        "scss/at-import-no-partial-leading-underscore": null
+    }
+}

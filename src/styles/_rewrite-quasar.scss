@@ -1,0 +1,189 @@
+.Button {
+    text-transform: none;
+    color: white;
+    border-radius: 7px;
+
+    &--primary {
+        border: 1px solid rgb(255 255 255 / 50%);
+        background: linear-gradient(90deg, #ffa300 -15.72%, #f15a24 125.76%);
+
+        &::before {
+            box-shadow: 0 1px 4px rgb(249 149 56 / 20%);
+        }
+    }
+
+    &--cancel {
+        color: $primary;
+        background-color: white;
+        border: 1px solid $primary;
+
+        &::before {
+            box-shadow: none;
+        }
+    }
+
+    .q-btn__content {
+        gap: 7px;
+    }
+
+    &.disabled {
+        background: $grey-200;
+        border: 1px solid rgb(255 255 255 / 50%);
+
+        &::before {
+            box-shadow: none;
+        }
+    }
+}
+
+.Toggle {
+    .q-toggle {
+        &__inner {
+            height: auto;
+
+            &--truthy .q-toggle__thumb {
+                left: 0.65em;
+
+                &::after {
+                    background: $white;
+                }
+            }
+
+            &--truthy .q-toggle__track {
+                opacity: 1;
+            }
+        }
+
+        &__thumb {
+            width: 0.35em;
+            height: 0.35em;
+            top: 0.4em;
+            left: 0.4em;
+        }
+
+        &__track {
+            border-radius: 99999px;
+            height: 0.5em;
+        }
+    }
+}
+
+.q-checkbox {
+    .q-checkbox {
+        &__inner {
+            &:not(.q-checkbox__inner--truthy):not(.q-checkbox__inner--indet) {
+                color: $grey-300;
+            }
+        }
+
+        &__bg {
+            border-radius: 3px;
+        }
+    }
+}
+
+.Pagination {
+    gap: 5px;
+
+    .q-btn {
+        border-radius: 99999px;
+        min-width: 24px !important;
+        min-height: 24px !important;
+
+        &__content {
+            line-height: 1;
+        }
+    }
+
+    & > .row {
+        gap: 5px;
+    }
+
+    & > button:last-of-type,
+    & > button:first-of-type {
+        font-size: 7px !important;
+        padding: 3px !important;
+    }
+
+    & > button:first-of-type {
+        margin-right: 15px;
+    }
+
+    & > button:last-of-type {
+        margin-left: 15px;
+    }
+}
+
+.Dialog {
+    .q-dialog {
+        &__inner > div {
+            width: 450px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgb(0 0 0 / 20%);
+        }
+    }
+
+    &__close-btn {
+        transition: 0.3s;
+
+        &:hover {
+            transform: scale(1.2);
+
+            .q-focus-helper {
+                opacity: 0 !important;
+            }
+        }
+    }
+}
+
+.Radio {
+    .q-radio__inner--truthy .q-radio__check {
+        transform: scale3d(1.2, 1.2, 1.2);
+    }
+}
+
+.Notify {
+    box-shadow: none;
+    border-radius: 10px;
+
+    .q-notification__actions {
+        padding: 0 0 0 40px;
+    }
+
+    .q-notification__message {
+        color: black;
+        padding: 18px 0;
+    }
+
+    &--warning {
+        border: 1px solid $warning-500;
+        background-color: #fffbeb;
+    }
+
+    &--error {
+        border: 1px solid $error-500;
+        background-color: $error-50;
+    }
+
+    &--success {
+        border: 1px solid $success-500;
+        background-color: $success-50;
+    }
+
+    &--info {
+        background-color: #ecf0fd;
+        border: 1px solid #1068b9;
+    }
+}
+
+.Tooltip {
+    font-size: 12px;
+    color: black;
+    font-weight: 400;
+    padding: 8px;
+    background: white;
+    box-shadow: 0 0 20px rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    word-break: break-word;
+}
+
